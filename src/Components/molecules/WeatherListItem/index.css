@@ -1,0 +1,9 @@
+.WeatherListItem {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 20vw;
+    border: 1px solid gray;
+    border-radius: 25px;
+    margin-left: 10px;
+}

@@ -6,6 +6,8 @@ export const WeatherList = () => {
   return (
     <div className="WeatherList">
       <WeatherListItem />
+      <WeatherListItem />
+      <WeatherListItem />
     </div>
   );
 };
