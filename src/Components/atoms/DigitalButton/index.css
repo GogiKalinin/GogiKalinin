@@ -1,0 +1,10 @@
+.DigitalButton {  
+  height: 40px;
+  width: 10vw;
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+}

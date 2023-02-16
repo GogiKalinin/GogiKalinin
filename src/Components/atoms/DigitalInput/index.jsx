@@ -3,6 +3,6 @@ import './index.css'
 
 export const DigitalInput = () => {
     return (
-        <input placeholder='search place...'></input>
+        <input className='DigitalInputInput' placeholder='search place...'></input>
     )
 }
