@@ -1,4 +1,7 @@
 .MainPage {
   color: blue;
-  
+}
+
+.MainPageBottom {
+  display: flex;
 }
