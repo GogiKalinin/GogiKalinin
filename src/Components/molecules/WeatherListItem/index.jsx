@@ -4,6 +4,7 @@ import "./index.css";
 export const WeatherListItem = () => {
   return (
     <div className="WeatherListItem">
+    
     </div>
   );
 };
