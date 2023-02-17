@@ -6,7 +6,7 @@ import "./index.css";
 export const SearchBlock = () => {
   return( <div className="SearchBlock">
     <DigitalInput />
-    <DigitalButton />
+    <DigitalButton title='search'/>
   </div>
   )
 };
