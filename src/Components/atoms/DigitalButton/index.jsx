@@ -1,8 +1,11 @@
 import React from 'react'
 import './index.css'
 
-export const DigitalButton = () => {
+export const DigitalButton = ({title, mode}) => {
     return (
-        <button className='DigitalButton'>show chosen</button>            
+        mode === 'search' ? 
+        <button className='DigitalButton'>{title}</button>            
+        :
+        <button className='DigitalButton'>{title}</button>            
     )
 }
