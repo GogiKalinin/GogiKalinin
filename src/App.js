@@ -5,30 +5,34 @@ import { MainPage } from './Components/pages/MainPage';
 
 
 export const App = () => {
-    useEffect(() => {
-      // const nowCategory = localStorage.getItem("nowCategory");
-      // if (nowCategory !== null) {
-      //   selectNavItem(
-      //     setShowMainElements,
-      //     productArray,
-      //     nowCategory,
-      //     setAllProducts,
-      //     navigationItems,
-      //     setNavigationItems
-      //   );
-      // }
-      fetch("https://dummyjson.com/products")
-        .then((res) => console.log(res.products))
-        .then((res) => console.log(res))
-        .then((res) => res.json())
-        // .then((res) => setData(res.products));
-    }, []);
-
-    let weather = fetch()
-    let url = 'https://api.openweathermap.org/data/2.5/weather?lat={50}&lon={50}&appid={7289dea3bffb551e47613d04c265b4ff}';
+  let test_data
+  let city = 'moscow'
+  function init() {
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d982b206b7125a363d94918d08ebf560`)
+    .then((resp) => {return resp.json()})
+    .then((data) => {
+        
+        console.log('data', data)
+        console.log('city', data.name)
+        localStorage.setItem('localData', JSON.stringify(data))
+    })
+    .catch(() => {
+        init()
+        // searchInp.value = ''
+      })
+    }
+    
+    init()
+    
+    setInterval(() => {
+      init()
+    }, 1000000) //Обновляет инфу каждые 10секунд
+    
+  
     return (
       <div className="App">
         <MainPage />
+        <p>{init}</p>
       </div>
     );
 }
