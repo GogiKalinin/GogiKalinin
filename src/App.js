@@ -36,6 +36,7 @@ let city = 'london'
         <MainPage />
         <p>{stateData.name}</p>
         <p>{stateData.main.temp}</p>
+        <p>{stateData.main.pressure}</p>
       </div>
     );
 }
