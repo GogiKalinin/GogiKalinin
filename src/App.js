@@ -1,24 +1,24 @@
-import React, { Component, useEffect } from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 import { MainPage } from './Components/pages/MainPage';
 
 
 export const App = () => {
-  let test_data
-  let city = 'moscow'
+  
+let city = 'london'
   function init() {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d982b206b7125a363d94918d08ebf560`)
     .then((resp) => {return resp.json()})
     .then((data) => {
-        
-        console.log('data', data)
-        console.log('city', data.name)
-        localStorage.setItem('localData', JSON.stringify(data))
-    })
+
+      console.log('data', data)
+      console.log('city', data.name)
+      
+      localStorage.setItem('localData', JSON.stringify(data))
+  })
+
     .catch(() => {
         init()
-        // searchInp.value = ''
       })
     }
     
@@ -26,13 +26,16 @@ export const App = () => {
     
     setInterval(() => {
       init()
-    }, 1000000) //Обновляет инфу каждые 10секунд
+    }, 1000000) //Обновляет инфу каждые 1000секунд
     
-  
+  console.log(JSON.parse(localStorage.getItem('localData')))
+  const [stateData, setStateData] = useState(JSON.parse(localStorage.getItem('localData')))
+  console.log(stateData)
     return (
       <div className="App">
         <MainPage />
-        <p>{init}</p>
+        <p>{stateData.name}</p>
+        <p>{stateData.main.temp}</p>
       </div>
     );
 }
