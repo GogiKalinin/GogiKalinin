@@ -33,7 +33,7 @@ let city = 'london'
   console.log(stateData)
     return (
       <div className="App">
-        <MainPage />
+        <MainPage data={stateData}/>
         <p>{stateData.name}</p>
         <p>{stateData.main.temp}</p>
         <p>{stateData.main.pressure}</p>

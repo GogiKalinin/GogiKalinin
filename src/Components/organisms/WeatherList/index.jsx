@@ -2,7 +2,8 @@ import React from "react";
 import { WeatherListItem } from "../../molecules/WeatherListItem";
 import "./index.css";
 
-export const WeatherList = () => {
+export const WeatherList = (data) => {
+  console.log(data)
   return (
     <div className="WeatherList">
       <WeatherListItem />
