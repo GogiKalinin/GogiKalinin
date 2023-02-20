@@ -5,7 +5,7 @@ import { MainPage } from './Components/pages/MainPage';
 
 export const App = () => {
   
-let city = 'london'
+let city = 'moscow'
   function init() {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d982b206b7125a363d94918d08ebf560`)
     .then((resp) => {return resp.json()})
