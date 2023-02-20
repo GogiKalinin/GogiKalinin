@@ -34,9 +34,6 @@ let city = 'moscow'
     return (
       <div className="App">
         <MainPage data={stateData}/>
-        <p>{stateData.name}</p>
-        <p>{stateData.main.temp}</p>
-        <p>{stateData.main.pressure}</p>
       </div>
     );
 }
