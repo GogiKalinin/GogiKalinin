@@ -4,7 +4,7 @@ import { SearchBlock } from "../../organisms/SearchBlock";
 import { WeatherList } from "../../organisms/WeatherList";
 import "./index.css";
 
-export const MainPage = ({data}) => {
+export const MainPage = ({ data }) => {
   return (
     <div className="MainPage">
       <div className="MainPageTop">
@@ -12,7 +12,7 @@ export const MainPage = ({data}) => {
       </div>
       <div className="MainPageBottom">
         <NavigationBlock />
-        <WeatherList data={data}/>
+        <WeatherList data={data} />
       </div>
     </div>
   );
