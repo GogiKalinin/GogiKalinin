@@ -4,8 +4,10 @@ import { MainPage } from './Components/pages/MainPage';
 
 
 export const App = () => {
+  const [city, setSity] = useState('moscow')
+  console.log(city)
   
-let city = 'moscow'
+let place = 'moscow'
   function init() {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d982b206b7125a363d94918d08ebf560`)
     .then((resp) => {return resp.json()})
@@ -38,7 +40,7 @@ let city = 'moscow'
       console.log('data', data)
       console.log('city', data.name)
       
-      localStorage.setItem('localData', JSON.stringify(data))
+      // localStorage.setItem('localData', JSON.stringify(data))
   })
 
     .catch(() => {
@@ -57,7 +59,7 @@ let city = 'moscow'
   // console.log(stateData)
     return (
       <div className="App">
-        {/* <MainPage data={stateData}/> */}
+        <MainPage data={stateData} setSity={setSity}/>
         <a href="https://www.pexels.com">
           <img src="https://images.pexels.com/lib/api/pexels-white.png" />
         </a>

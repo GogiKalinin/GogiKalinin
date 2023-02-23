@@ -1,4 +1,16 @@
 .WeatherList {
     display: flex;
+    flex-direction: column;
     padding-top: 50px;
+}
+
+.WeatherListName {
+    display: flex;
+    align-items: start;
+    padding-left: 10px;
+}
+
+.WeatherListMain {
+    display: flex;
+    flex-direction: row;
 }
