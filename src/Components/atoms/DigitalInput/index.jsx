@@ -1,5 +1,4 @@
 import React from "react";
-import { DigitalButton } from "../DigitalButton";
 import "./index.css";
 
 export const DigitalInput = ({ setSity }) => {
@@ -13,7 +12,7 @@ export const DigitalInput = ({ setSity }) => {
   return (
     <div>
       Write time:
-      <input type="text" id="get_num" name="get_num" />
+      <input className="DigitalInputInput" type="text" id="get_num" name="get_num" />
       <div id="add" className="btn" onClick={()=>getN()}>Add</div>
     </div>
   );

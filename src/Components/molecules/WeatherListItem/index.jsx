@@ -4,9 +4,14 @@ import "./index.css";
 export const WeatherListItem = ({ data }) => {
   return (
     <div className="WeatherListItem">
-      <p>{data.main.temp}</p>
-      <p>{data.main.pressure}</p>
-      <p>{data.wind.speed}</p>
+      {data !== undefined && (
+      <div>
+        <p>{data.main.temp}</p>
+        <p>{data.main.pressure}</p>
+        <p>{data.wind.speed}</p>
+      </div>
+      )
+      }
     </div>
   );
 };

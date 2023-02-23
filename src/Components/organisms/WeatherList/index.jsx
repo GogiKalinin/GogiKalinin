@@ -9,9 +9,9 @@ export const WeatherList = ({ data }) => {
         <h1>{data.name}</h1>
       </div>
       <div className="WeatherListMain">
+        {/* <WeatherListItem data={data} />
         <WeatherListItem data={data} />
-        <WeatherListItem data={data} />
-        <WeatherListItem data={data} />
+        <WeatherListItem data={data} /> */}
       </div>
     </div>
   );
