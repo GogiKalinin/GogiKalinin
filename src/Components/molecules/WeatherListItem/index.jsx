@@ -2,16 +2,16 @@ import React from "react";
 import "./index.css";
 
 export const WeatherListItem = ({ data }) => {
+  console.log(data)
   return (
     <div className="WeatherListItem">
-      {data !== undefined && (
+        {data !== [] && (
       <div>
-        <p>{data.main.temp}</p>
-        <p>{data.main.pressure}</p>
-        <p>{data.wind.speed}</p>
+          <p>{data.cod}</p>
+          <p>{data.id}</p>
+          <p>{data.dt}</p>
       </div>
-      )
-      }
+        )}
     </div>
   );
 };

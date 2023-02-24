@@ -4,7 +4,7 @@ import { SearchBlock } from "../../organisms/SearchBlock";
 import { WeatherList } from "../../organisms/WeatherList";
 import "./index.css";
 
-export const MainPage = ({ data, setSity, setWeatherMode }) => {
+export const MainPage = ({ data, setSity, setWeatherMode, weatherMode }) => {
   return (
     <div className="MainPage">
       <div className="MainPageTop">
@@ -12,7 +12,7 @@ export const MainPage = ({ data, setSity, setWeatherMode }) => {
       </div>
       <div className="MainPageBottom">
         <NavigationBlock setWeatherMode={setWeatherMode}/>
-        <WeatherList data={data} />
+        <WeatherList data={data} weatherMode={weatherMode} setWeatherMode={setWeatherMode}/>
       </div>
     </div>
   );
