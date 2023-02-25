@@ -3,12 +3,15 @@ import { DigitalButton } from '../../atoms/DigitalButton'
 import './index.css'
 
 export const NavigationBlock = ({setWeatherMode}) => {
-    
+    const changeWeatherMode = (mode) => {
+        setWeatherMode(mode)
+        localStorage.setItem('weatherMode', mode)
+    }
     return (
         <div className='NavigationBlock'>
-            <DigitalButton title ='current' click = {setWeatherMode('current')}/>
-            <DigitalButton title ='5 days' click={()=>setWeatherMode('days')}/>
-            <DigitalButton title ='3 hours' click={()=>setWeatherMode('hours')}/>
+            <DigitalButton title ='current' click = {()=>changeWeatherMode('current')}/>
+            <DigitalButton title ='5 days' click={()=>changeWeatherMode('days')}/>
+            <DigitalButton title ='3 hours' click={()=>changeWeatherMode('hours')}/>
         </div>
     )
 }

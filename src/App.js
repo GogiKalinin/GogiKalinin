@@ -4,11 +4,15 @@ import { MainPage } from './Components/pages/MainPage';
 
 
 export const App = () => {
-  const [city, setSity] = useState('moscow')
-  const [weatherMode, setWeatherMode] = useState('currentWeather')
+  const [city, setCity] = useState('moscow')
+  const [weatherMode, setWeatherMode] = useState('current')
   const [stateData, setStateData] = useState([])
 
+  console.log(weatherMode)
+  console.log(city)
+
   function init() {
+    console.log(city)
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d982b206b7125a363d94918d08ebf560`)
     .then((resp) => {return resp.json()})
     .then((data) => {
@@ -16,6 +20,7 @@ export const App = () => {
       console.log('data', data)
       console.log('city', data.name)
       setStateData(data)
+      console.log(stateData)
   })
 
     .catch(() => {
@@ -52,14 +57,14 @@ export const App = () => {
     //   init2()
     // }, 1000000) //Обновляет инфу каждые 1000секунд
 
-    // useEffect(() => {   
-    //   init()
-    // });    
+    useEffect(() => {   
+      init()
+    }, <MainPage />);    
     console.log(weatherMode)
   console.log(stateData)
     return (
       <div className="App">
-        <MainPage data={stateData} setSity={setSity} weatherMode={weatherMode} setWeatherMode={setWeatherMode}/>
+        <MainPage data={stateData} setCity={setCity} weatherMode={weatherMode} setWeatherMode={setWeatherMode}/>
         <a href="https://www.pexels.com">
           <img src="https://images.pexels.com/lib/api/pexels-white.png" />
         </a>

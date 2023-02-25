@@ -1,11 +1,12 @@
 import React from "react";
 import "./index.css";
 
-export const DigitalInput = ({ setSity }) => {
+export const DigitalInput = ({ setCity }) => {
   var addTime = document.getElementById('add');
+
   function getN() {
     var getNum = document.getElementById('get_num').value;
-    setSity(getNum)
+    setCity(getNum)
     console.log(getNum);
   }
   

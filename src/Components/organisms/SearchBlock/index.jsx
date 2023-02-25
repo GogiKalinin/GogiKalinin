@@ -3,9 +3,9 @@ import { DigitalButton } from "../../atoms/DigitalButton";
 import { DigitalInput } from "../../atoms/DigitalInput";
 import "./index.css";
 
-export const SearchBlock = ({setSity}) => {
+export const SearchBlock = ({setCity}) => {
   return( <div className="SearchBlock">
-    <DigitalInput setSity={setSity}/>
+    <DigitalInput setCity={setCity}/>
     <DigitalButton title='search'/>
   </div>
   )

@@ -13,11 +13,13 @@ export const WeatherList = ({ data, weatherMode, setWeatherMode }) => {
           (
             <div className="WeatherListMain">              
               <WeatherListItem data={data} />
-              <WeatherListItem data={data} />
-              <WeatherListItem data={data} />
             </div>
           ) : (
-            <WeatherListItem data={data}/>
+            <div>
+              <WeatherListItem data={data} />
+              <WeatherListItem data={data} />
+              <WeatherListItem data={data}/>
+            </div>
           )
         }
     </div>
