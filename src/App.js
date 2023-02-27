@@ -62,12 +62,10 @@ export const App = () => {
     }, <MainPage />);    
     console.log(weatherMode)
   console.log(stateData)
+
     return (
       <div className="App">
         <MainPage data={stateData} setCity={setCity} weatherMode={weatherMode} setWeatherMode={setWeatherMode}/>
-        <a href="https://www.pexels.com">
-          <img src="https://images.pexels.com/lib/api/pexels-white.png" />
-        </a>
       </div>
     );
 }
