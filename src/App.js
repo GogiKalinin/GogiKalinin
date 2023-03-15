@@ -59,7 +59,7 @@ export const App = () => {
 
     useEffect(() => {   
       init()
-    }, <MainPage />);    
+    }, [city, weatherMode]);    
     console.log(weatherMode)
   console.log(stateData)
 
