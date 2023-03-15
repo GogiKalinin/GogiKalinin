@@ -9,19 +9,20 @@ export const WeatherList = ({ data, weatherMode, setWeatherMode }) => {
       <div className="WeatherListName">
         <h1>{data.name}</h1>
       </div>
-        {weatherMode === 'current' ?  
+        {/* {weatherMode === 'current' ?  
           (
             <div className="WeatherListMain">              
               <WeatherListItem data={data} />
             </div>
           ) : (
             <div>
-              <WeatherListItem data={data} />
-              <WeatherListItem data={data} />
-              <WeatherListItem data={data}/>
+              <WeatherListItem data={data} weatherMode={weatherMode}/>
+              <WeatherListItem data={data} weatherMode={weatherMode}/>
+              <WeatherListItem data={data} weatherMode={weatherMode}/>
             </div>
           )
-        }
+        } */}
+        <WeatherListItem data={data} weatherMode={weatherMode}/>
     </div>
   );
 };

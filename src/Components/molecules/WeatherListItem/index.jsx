@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-export const WeatherListItem = ({ data }) => {
+export const WeatherListItem = ({ data, weatherMode }) => {
   console.log(data)
   return (
     <div className="WeatherListItem">
