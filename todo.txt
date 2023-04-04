@@ -1,0 +1,5 @@
+add user an ability to chose 
+place before any weather data shown
+(add popup for choosing any city he likes
+maybe add list of main cities of the world
+or some country)

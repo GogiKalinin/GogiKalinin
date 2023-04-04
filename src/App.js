@@ -43,31 +43,6 @@ export const App = () => {
       init()
     }, 1000000) //Обновляет инфу каждые 1000секунд
 
-
-    // let town = 'moscow';
-  // function init2() {
-  //   fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${town}&appid=d982b206b7125a363d94918d08ebf560`)
-  //   .then((resp) => {return resp.json()})
-  //   .then((data) => {
-
-  //     console.log('data', data)
-  //     console.log('city', data.name)
-  //     return(data)
-      
-  //     // localStorage.setItem('localData', JSON.stringify(data))
-  // })
-
-  //   .catch(() => {
-  //       init2()
-  //     })
-  //   }
-    
-  //   init2()
-    
-    // setInterval(() => {
-    //   init2()
-    // }, 1000000) //Обновляет инфу каждые 1000секунд
-
     useEffect(() => {   
       init()
     }, [city, weatherMode]);    

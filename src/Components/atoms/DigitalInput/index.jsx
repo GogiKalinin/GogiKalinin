@@ -12,9 +12,9 @@ export const DigitalInput = ({ setCity }) => {
   
   return (
     <div>
-      Write time:
       <input className="DigitalInputInput" type="text" id="get_num" name="get_num" />
-      <div id="add" className="btn" onClick={()=>getN()}>Add</div>
+      {/* <div id="add" className="btn" onClick={()=>getN()}>Add</div> */}
+      <button id="add" className="btn" onClick={()=>getN()}>Add</button>
     </div>
   );
 };
